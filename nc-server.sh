@@ -24,7 +24,7 @@ function calc-content-length-header() {
 }
 
 function main() {
-    echo "Listening on port $port..."
+    echo "[nc-server:$$] Listening on port $port..."
     while true;
         do gen-response "$(gen-html-page)" | nc -l $port;
     done;
